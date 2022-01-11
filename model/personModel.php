@@ -23,7 +23,8 @@
 
         }
 
-        public function setPerson($nom, $pseudo){
+        public function setPerson($nom, $pseudo)
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('INSERT INTO test(nom, pseudo) VALUES (:nom, :pseudo)');
             $query->execute([
@@ -33,7 +34,8 @@
 
         }
 
-        public function getPerson($limite){
+        public function getPerson($limite)
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('SELECT * FROM test LIMIT '.$limite);
             $query->execute();
@@ -41,7 +43,8 @@
             return $get;
         }
 
-        public function getAllPersons(){
+        public function getAllPersons()
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('SELECT * FROM test');
             $query->execute();
@@ -49,7 +52,8 @@
             return $get;
         }
 
-        public function unsetPerson($id){
+        public function unsetPerson($id)
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('DELETE FROM test WHERE id=:id');
             $query->execute([
@@ -57,7 +61,8 @@
             ]);
         }
 
-        public function ciblePerson($id){
+        public function ciblePerson($id)
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('SELECT * FROM test WHERE id=:id');
             $query->execute([
@@ -67,7 +72,8 @@
             return $get;
         }
 
-        public function updatePerson($id,$nom,$pseudo){
+        public function updatePerson($id,$nom,$pseudo)
+        {
             $db = $this->dbConnect();
             $query = $db->prepare('UPDATE test SET nom=:nom, pseudo=:pseudo WHERE id =:id');
             $query->execute([

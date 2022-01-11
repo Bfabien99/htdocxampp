@@ -19,9 +19,7 @@
         }
         else {
             $params = $match['params'];
-
             require "view/{$match['target']}.php";
-
         }
 
     }

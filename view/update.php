@@ -8,7 +8,8 @@
             $reqs = $initController->personUpdate((int)$params['id'],$_POST['nom'],$_POST['pseudo']);
             header('location:/');
         }
-        else {
+        else
+        {
             echo "Remplir tous les champs";
         }
     }
