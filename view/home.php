@@ -1,6 +1,6 @@
 <?php
     $initController = new personController();
-    $reqs = $initController->personShow(20);
+    $reqs = $initController->personShow(10);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,21 +16,21 @@
         <?php foreach($reqs as $person):?>
 
             <div class="box">
-            <h1><?= $person['id'] ?></h1>
+            <h1 class="id"><?= $person['id'] ?></h1>
             <h2>Tu t'appelles : </h2><strong><?= $person['nom'] ?></strong>
             <h2>Ton pseudo est : </h2><em><?= $person['pseudo'] ?></em>
             <div class="box">
-                <a href="/view/delete&username=<?=$person['nom'];?><?=$person['id'];?>">
-                    <em>del</em>
+                <a href="/view/delete&username=<?=$person['nom'];?><?=$person['id'];?>" class="delete">
+                    <em>supp</em>
                 </a>
-                <a href="/view/update&username=<?=$person['nom'];?><?=$person['id'];?>">
+                <a href="/view/update&username=<?=$person['nom'];?><?=$person['id'];?>" class="update">
                     <em>modif</em>
                 </a>
             </div>
             </div>
-            
+            <hr>
         <?php endforeach;?>
     </div>
-    <a href="/view/enregistrement">Ajouter</a>
+    <a href="/view/enregistrement" class ="add">Ajouter</a>
 </body>
 </html>

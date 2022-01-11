@@ -5,3 +5,49 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.box .id{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vmin;
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+a{
+    color: white;
+    padding: 5px;
+    border: none;
+    text-decoration: none;
+    border-radius: 2px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.delete{
+    background-color: tomato;
+}
+.delete:hover{
+    background-color: rgb(231, 73, 45);
+}
+
+.update{
+    background-color: rgb(71, 120, 255);
+}
+.update:hover{
+    background-color: rgb(36, 90, 238);
+}
+
+.add{
+    background-color: rgb(85, 139, 71);
+    font-size: 3.2vmin;
+    display: inline-block;
+    width: 200px;
+}
+.add:hover{
+    background-color: rgb(69, 128, 54);
+}
+
