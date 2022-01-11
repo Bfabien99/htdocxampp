@@ -31,6 +31,6 @@
             <hr>
         <?php endforeach;?>
     </div>
-    <a href="/view/enregistrement" class ="add">Ajouter</a>
+    <a href="<?= $router->generate('addPage'); ?>" class ="add">Ajouter</a>
 </body>
 </html>
