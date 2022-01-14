@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(10, 10, 10);
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+
+.left input{
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    padding: 5px;
+}
+
+input:focus{
+    border: 1px solid tomato;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 1em;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 5px;
+    height: 100%;
+}
+
+nav ul li:hover a{
+    color:tomato;
+}
+
+nav ul li a{
+    color: white;
+}
+
+.logo{
+    color: #ccc;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding:20px;
+}
+
+.content{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items:center;
+    gap: 1em;
+}
+
+.action{
+    display: flex;
+    justify-content:space-between;
+    gap: 1em;
+    align-items:center;
+}
+
+.update{
+    padding: 5px;
+    min-width: 100px;
+    color: white;
+    background: #5c9df5;
+    text-align: center;
+}
+
+.delete{
+    padding: 5px;
+    min-width: 100px;
+    color: white;
+    background: rgb(209, 9, 9);
+    text-align: center;
+}
+
+.more{
+    padding: 5px;
+    min-width: 100px;
+    color: white;
+    background: rgb(175, 114, 22);
+    text-align: center;
+    margin: 0 auto;
+    border-radius:1px 0px 0px 0px
+}
+
+.show{
+    padding: 5px;
+    color: black;
+    box-shadow: 0px 0px 5px rgb(70, 69, 69);
+}
+
+.show:hover{
+    zoom: 102%;
+}
+
+input[type="submit"]{
+    width: 50px;
+    color: white;
+    background-color:#5c9df5;
+}
+
+.retour{
+    padding:5px;
+    width: 50px;
+    color: white;
+    background-color:#f5a15c;
+    height: 30px;
+    border-radius:5px;
+    text-align: center;
+}

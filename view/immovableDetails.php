@@ -1,15 +1,14 @@
 <?php
-    $limit=6;
     $initController = new immovableController;
-    $Calls = $initController->obtainLimit($limit);
-
+    $Calls = $initController->cibleId((int)$params['id']);
     if (isset($_POST['submit'])) {
         if (!empty($_POST['search'])) {
             $Calls = $initController->search($_POST['search']);
+            header('location:/');
         }
         else 
         {
-            $Calls = $initController->obtainLimit($limit);
+            $Calls = $initController->cibleId((int)$params['id']);
             header('location:/');
         }
     }
@@ -24,12 +23,12 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+<header>
         <div class="topbar">
             <h2>#GestionImmobilier</h2>
             <form action="" method="post">
             <input type="search" name="search" placeholder="recherche..." title="Entrer le prix ou la localité qui vous interesse">
-            <input type="submit" value="go" name="submit"> 
+            <input type="submit" value="go" name="submit">
             </form>
         </div>
         <div class="banner">
@@ -53,21 +52,24 @@
             </li>
         </ul>
     </nav>
-    <div class="parent">
-        <?php foreach($Calls as $call):?>
-        <div class="child">
-            <a href="/view/viewdetails&property_<?=$call['id']?>/">
-                <div class="pic">
+    <div class="box">
+        <div class="parent2">
+            <div class="child">
+                <div class="pic2">
                 </div>
-                <h3>Superficie : <?= $call['area']?> m²</h3>
-                <h3>Prix : <?= $call['price']?> fcfa</h3>
-                <h3>Localisation : <?= $call['location']?></h3>
-            </a>
+                <div class="info">
+                    <h3>Proprio: <?= $Calls['owner']?></h3>
+                    <h3>Numéro: <?= $Calls['tel']?></h3>
+                    <h3>Localisation: <?= $Calls['location']?></h3>
+                    <h3>Détails: <?= $Calls['details']?></h3>
+                    <h3>Superficie: <?= $Calls['area']?></h3>
+                    <h3>Prix: <?= $Calls['price']?></h3>
+                </div>
+            
         </div>
-        <?php endforeach;?>
-    </div>  
-
+        </div>
+    </div>
     
-
+    <a href="/">Retour</a>
 </body>
 </html>

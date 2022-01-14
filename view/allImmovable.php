@@ -1,16 +1,16 @@
 <?php
-    $limit=6;
     $initController = new immovableController;
-    $Calls = $initController->obtainLimit($limit);
+    $Calls = $initController->obtainAll();
 
     if (isset($_POST['submit'])) {
         if (!empty($_POST['search'])) {
             $Calls = $initController->search($_POST['search']);
+            header('location:/');
         }
         else 
         {
-            $Calls = $initController->obtainLimit($limit);
-            header('location:/');
+            $Calls = $initController->obtainAll();
+            header('location:/view/all/');
         }
     }
 ?>
@@ -29,7 +29,7 @@
             <h2>#GestionImmobilier</h2>
             <form action="" method="post">
             <input type="search" name="search" placeholder="recherche..." title="Entrer le prix ou la localité qui vous interesse">
-            <input type="submit" value="go" name="submit"> 
+            <input type="submit" value="go" name="submit">
             </form>
         </div>
         <div class="banner">
@@ -39,7 +39,7 @@
     </header>
     <nav>
         <ul>
-            <li>
+        <li>
                 <a href="/">Accueil</a>
             </li>
             <li>
