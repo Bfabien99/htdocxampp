@@ -53,7 +53,7 @@
                         $query->execute([
                             'name' => $name,
                             'tel' => $tel,
-                            'date' => date('Y-m-d H-M-i'),
+                            'date' => date('Y-m-d H:i:s'),
                             'location' => $location,
                             'area' => $area,
                             'details' => $details,

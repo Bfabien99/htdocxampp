@@ -48,7 +48,7 @@
                 <a href="/view/all/">Toutes les propriétés</a>
             </li>
             <li>
-                <a href="/view/login/">Nous Contacter</a>
+                <a href="/view/nouscontacter/">Nous Contacter</a>
             </li>
         </ul>
     </nav>

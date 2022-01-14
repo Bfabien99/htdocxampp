@@ -1,18 +1,5 @@
 <?php
-    $limit=6;
-    $initController = new immovableController;
-    $Calls = $initController->obtainLimit($limit);
-
-    if (isset($_POST['submit'])) {
-        if (!empty($_POST['search'])) {
-            $Calls = $initController->search($_POST['search']);
-        }
-        else 
-        {
-            $Calls = $initController->obtainLimit($limit);
-            header('location:/');
-        }
-    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +14,6 @@
     <header>
         <div class="topbar">
             <h2>#GestionImmobilier</h2>
-            <form action="" method="post">
-            <input type="search" name="search" placeholder="recherche..." title="Entrer le prix ou la localité qui vous interesse">
-            <input type="submit" value="go" name="submit"> 
-            </form>
         </div>
         <div class="banner">
             <!-- <img src="" alt=""> -->
@@ -54,17 +37,20 @@
         </ul>
     </nav>
     <div class="parent">
-        <?php foreach($Calls as $call):?>
         <div class="child">
-            <a href="/view/viewdetails&property_<?=$call['id']?>/">
-                <div class="pic">
-                </div>
-                <h3>Superficie : <?= $call['area']?> m²</h3>
-                <h3>Prix : <?= $call['price']?> fcfa</h3>
-                <h3>Localisation : <?= $call['location']?></h3>
-            </a>
+            <div class="group">
+                <h4>Email : </h4><em> fabienbrou99@gmail.com</em>
+            </div>
+            <div class="group">
+                <h4>Contact : </h4><em> (00225) 0504774183 / 0153148864</em>
+            </div>
+            <div class="group">
+                <h4>Localisation : </h4><em> Angré Gestoci, non loin de la Pharmacie Analia</em>
+            </div>
+            <div class="group">
+                <h4>Adresse : </h4><em> 01 ABIDJAN 08 BP</em>
+            </div>
         </div>
-        <?php endforeach;?>
     </div>  
 
     

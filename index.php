@@ -6,6 +6,7 @@
     $router = new AltoRouter();
     $router->map('GET','/','home');
     $router->map('POST','/','home');
+    $router->map('GET','/view/nouscontacter/','contact');
     $router->map('GET','/view/admin/','dashboard');
     $router->map('POST','/view/admin/','dashboard');
     $router->map('GET','/view/all/','allImmovable');

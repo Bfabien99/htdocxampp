@@ -78,6 +78,8 @@ a{
 nav{
     background-color: rgb(15, 17, 17);
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 ul{
