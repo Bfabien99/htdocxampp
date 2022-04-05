@@ -1,0 +1,15 @@
+{
+    "name": "imac-12/test-router",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bfabien99",
+            "email": "91257945+Bfabien99@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

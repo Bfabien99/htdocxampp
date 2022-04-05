@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.topbar{
+    background-color: rgb(15, 17, 17);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.topbar h2{
+    color: rgb(46, 46, 46);
+}
+
+.topbar input{
+    height: 30px;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding:5px;
+}
+
+.banner{
+    display: flex;
+    justify-content:center;
+    background-color: white;
+    animation-name: banner;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    border: 1px solid silver;
+    box-shadow: 0px 2px 5px lightgray;
+    background: url("/assets/image/house_searching.svg") no-repeat center;
+    background-size: cover;
+    height: 300px;
+    margin: 10px 0;
+}
+
+/* .banner img{
+    width:60%;
+} */
+
+.banner h3{
+    color: rgb(190, 190, 190);
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.637);
+    padding: 10px;
+}
+
+.banner h3::after{
+    content: "Recherchez et obtenez la maison qui vous correspond...";
+    animation-name: text;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+}
+
+nav{
+    background-color: rgb(15, 17, 17);
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+ul li{
+    padding:10px;
+    height: 100%;
+}
+
+ul li a{
+    color: #fff;
+}
+
+ul li:hover{
+    background-color: rgb(31, 34, 34);
+}
+
+ul li:hover a{
+    color: rgb(182, 182, 182);
+}
+
+input[type="submit"]{
+    width: 50px;
+    color: white;
+    background-color:#5c9df5;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color:white;
+    padding: 5px;
+}
+
+.parent2 {
+    display: flex;
+    justify-content: center;
+    background-color:white;
+    padding: 5px;
+}
+.parent2 .child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5em;
+    flex-wrap: wrap;
+    background-color:rgb(241, 233, 233);
+    padding: 5px;
+    border-radius:2px;
+    box-shadow: 0px 2px 5px rgb(241, 241, 241);
+    margin:5px;
+}
+
+.child{
+    background-color:rgb(241, 233, 233);
+    padding: 5px;
+    border-radius:2px;
+    box-shadow: 0px 2px 5px rgb(241, 241, 241);
+    margin:5px;
+}
+
+    .pic{
+        background: url("/assets/image/house_img.svg") no-repeat center;
+        background-size: cover;
+        height: 200px;
+    }
+
+    .pic2{
+        background: url("/assets/image/house_img.svg") no-repeat center;
+        background-size: cover;
+        width: 500px;
+        height: 400px;
+    }
+
+    @keyframes banner {
+        0% { background:url("/assets/image/house_searching.svg") no-repeat center ;}
+        30% { background:url("/assets/image/select_house.svg") no-repeat center ;}
+        70% { background:url("/assets/image/house_location.svg") no-repeat center ;}
+        100% { background:url("/assets/image/house_searching.svg") no-repeat center ;}
+    }
+
+    @keyframes text {
+        0% { content: "Recherchez et obtenez la maison qui vous correspond... "; }
+        30% { content: "Choisissez celle qui convient à votre budget "; }
+        70% { content: "Recherchez la localité qui vous convient "; }
+        100% { content: "Recherchez et obtenez la maison qui vous correspond... "; }
+    }
